@@ -1,0 +1,6 @@
+{
+	"extends": "ember-mx",
+	"rules": {
+		"no-console": 0
+	}
+}

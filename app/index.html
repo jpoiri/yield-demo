@@ -1,25 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>YieldDemo</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 7]> <html class="ie6 ie-browser"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie-browser"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie-browser"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie-browser"> <![endif]-->
 
-    {{content-for "head"}}
+<!-- [if (gt IE 9)|!(IE)]><! -->
+<html class="">
+	<!-- <![endif] -->
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/yield-demo.css">
+	<head>
+		<meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta http-equiv="x-dns-prefetch-control" content="on">
+		<title>yield-demo</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{{content-for 'application-version'}}
+		{{content-for 'ember-mx-version'}}
+		{{content-for 'build-date'}}
+		<base href="/" />
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+		<!-- Google Tag Manager - Start -->
+		{{content-for 'google-tag-manager'}}
+		<!-- Google Tag Manager - End -->
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/yield-demo.js"></script>
+		<!-- faviconss (will appear in the top left corner of the browser tab) -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="assets/favicons/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="assets/favicons/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="Elements Online/Eléments en ligne" />
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="assets/favicons/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="assets/favicons/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="assets/favicons/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="assets/favicons/mstile-310x310.png" />
 
-    {{content-for "body-footer"}}
-  </body>
+		{{content-for 'head'}}
+
+		<link rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+		<link integrity="" rel="stylesheet" href="{{rootURL}}assets/yield-demo.css">
+
+		{{content-for 'head-footer'}}
+		<style>
+			.bootstrap-wrapper {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				top: 0;
+				background-color: transparent;
+			}
+			.bootstrap-ctr {
+				display: flex;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+                <!-- The element below is used to display an animation while the application is loaded and parsed -->
+		<div class="bootstrap-wrapper" id="bootstrap">
+			<div class="bootstrap-ctr">
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+					<div class="bounce4"></div>
+				</div>
+			</div>
+		</div>
+
+                {{content-for 'browse-happy'}} 
+                {{content-for "body"}}
+
+		<script src="{{rootURL}}assets/vendor.js"></script>
+		<script src="{{rootURL}}assets/yield-demo.js"></script>
+
+		{{content-for "body-footer"}}
+	</body>
 </html>

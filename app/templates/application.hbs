@@ -1,5 +1,23 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<!-- Header -->
+<MxApplicationHeader as |ApplicationHeader|>
 
-{{outlet}}
+	<ApplicationHeader.logo/>
+
+	<ApplicationHeader.link @action={{action "toggleLocale" target=i18n}}>
+		<i class="far fa-globe" aria-hidden="true"></i>
+		<span class="hidden-xs">{{t 'mx.button.toggle_locale'}}</span>
+		<span class="sr-only">{{t 'mx.a11y.toggle_locale'}}</span>
+	</ApplicationHeader.link>
+
+</MxApplicationHeader>
+
+<!-- Body -->
+<MxApplicationBody>
+	{{!-- The following component displays Ember's default welcome message. --}}
+		<WelcomePage/>
+	{{!-- Feel free to remove this! --}}
+	{{outlet}}
+</MxApplicationBody>
+
+<!-- Footer -->
+<MxApplicationFooter/>

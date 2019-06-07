@@ -1,0 +1,7 @@
+{
+  "name": "yield-demo",
+  "dependencies": {
+    "bootstrap-sass": "3.4.*",
+    "parsleyjs": "2.3.*"
+  }
+}

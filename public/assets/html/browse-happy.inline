@@ -1,0 +1,17 @@
+<!--[if lte IE 9 ]>
+	<script>
+		function getUrlParamByName(name) {
+			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+			return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+		if (getUrlParamByName('lang') === 'en') {
+			window.location.assign('ie-exception-en.html');
+		} else if (getUrlParamByName('lang') === 'fr') {
+			window.location.assign('http://browsehappy.com/?locale=fr');
+		} else {
+			window.location.assign('http://browsehappy.com/?locale=en');
+		};
+	</script>
+<![endif]-->
