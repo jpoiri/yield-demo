@@ -1,0 +1,6 @@
+<TomsterViewer @heading="The Tomsters"
+               @theme="canada" as |viewer|>
+
+    <Tomster id={{concat viewer.id "-tomster"}} @theme={{viewer.theme}} />
+
+</TomsterViewer>

@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+    {{#if hasBlock}}
+        <div class="panel-heading">{{@heading}}</div>
+
+        {{yield}}
+
+    {{else}}
+        <div class="panel-heading">{{@heading}}</div>
+
+        <Tomster @theme={{@theme}} />
+
+    {{/if}}
+</div>

@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    {{#if hasBlock}}
+
+        {{yield (hash header=(component "tomster-viewer-header" heading=heading))}}
+
+        {{#each @tomsters as |tomster|}}
+
+            {{yield (hash tomster=(component "tomster" theme=tomster.theme))}}
+
+        {{/each}}
+
+    {{else}}
+
+        <TomsterViewerHeader @heading={{@heading}} />
+
+        {{#each @tomsters as |tomster|}}
+
+            <Tomster @theme={{tomster.theme}} />
+
+        {{/each}}
+
+    {{/if}}
+</div>

@@ -1,0 +1,17 @@
+<TomsterViewer @tomsters={{tomsters}} as |viewer|>
+
+    <viewer.header>
+
+        <span class="title">The tomsters</span>
+
+    </viewer.header>
+
+    <viewer.tomster class="custom-tomster" as |tomster|>
+
+        <p>{{tomster.tomsterCaption}}</p>
+
+        <img src={{tomster.tomsterImg}} />
+
+    </viewer.tomster>
+
+</TomsterViewer>

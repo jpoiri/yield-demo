@@ -1,0 +1,8 @@
+{{#if hasBlock}}
+    {{yield (hash tomsterImg=tomsterImg tomsterCaption=tomsterCaption theme=theme)}}
+{{else}}
+    <figure>
+        <img src={{this.tomsterImg}} alt={{@theme}} />
+        <figcaption>{{this.tomsterCaption}}</figcaption>
+    </figure>
+{{/if}}

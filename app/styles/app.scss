@@ -1,5 +1,14 @@
-// -------------------------------------------------------------------------------------------------------------------------------------
-//  Include your SASS code for the application
-// Create the file (with the underscore) app/styles/inc/_yield-demo.scss and uncomment the line below 
-// -------------------------------------------------------------------------------------------------------------------------------------
-// @import './inc/yield-demo';
+@import "./components/tomster-viewer";
+@import "./components/tomster";
+@import "./components/tomster-viewer-header";
+
+.custom-tomster {
+  p {
+    font-size: 45px;
+    color: #e04e39;
+  }
+  img {
+    padding: 40px;
+    border: 11px dotted #e04e39;
+  }
+}
