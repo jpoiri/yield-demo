@@ -1,22 +1,22 @@
-import Component from "@ember/component";
-import { computed } from "@ember/object";
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 
 export default Component.extend({
-	classNames: ["tomster"],
+    classNames: ['tomster'],
 
-	theme: "original",
+    theme: 'canada',
 
-	tomsterImg: computed('theme', function() {
-		return `assets/tomsters/${this.theme}.png`;
-	}),
+    tomsterImg: computed('theme', function() {
+        return `assets/tomsters/${this.theme}.png`;
+    }),
 
-	tomsterCaption: computed('theme', function() {
-		return `The "${this.theme.capitalize()}" tomster`;
-	}),
+    tomsterCaption: computed('theme', function() {
+        return `The "${this.theme.capitalize()}" tomster`;
+    }),
 
-	click() {
-		if (this.clickAction) {
-			this.clickAction();
-		}
-	}
+    click() {
+        if (this.clickAction) {
+            this.clickAction();
+        }
+    }
 });
